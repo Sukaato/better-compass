@@ -1,2 +1,2 @@
 # coords
-Small datapack for minecraft 1.16 tcan display coordinate in actionbar
+Small datapack for minecraft 1.16 can display coordinate in actionbar
