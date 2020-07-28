@@ -24,5 +24,6 @@ tag @a remove coords.display.off
 tag @a remove coords.display.on
 
 title @a times 0 1 0
+title @s actionbar ["", {"text": ""}]
 
 scoreboard players set isUp coords.const 1
