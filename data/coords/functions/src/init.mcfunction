@@ -1,29 +1,28 @@
-tellraw @a ["",{"text":"[ ","color":"dark_gray"},{"text":"Initialisation","color":"gold"},{"text":" ] ","color":"dark_gray"},{"text":"Coords"}]
+tellraw @a ["", {"text": "[ ", "color": "dark_gray"}, {"text": "Initialization", "color": "gold"}, {"text": " ] ", "color": "dark_gray"}, {"text": "Coords"}]
 
-scoreboard objectives remove coords.const
-scoreboard objectives remove coords.pos_x
-scoreboard objectives remove coords.pos_y
-scoreboard objectives remove coords.pos_z
+scoreboard objectives remove coords.config
+scoreboard objectives remove coords.pos.x
+scoreboard objectives remove coords.pos.y
+scoreboard objectives remove coords.pos.z
 scoreboard objectives remove coords.rotate.y
+scoreboard objectives remove coords.toggle
+scoreboard objectives remove coords.minify
 
-scoreboard objectives add coords.const dummy ["", {"text": "Coords constant"}]
-scoreboard objectives add coords.pos_x dummy ["", {"text": "X coords"}]
-scoreboard objectives add coords.pos_y dummy ["", {"text": "Y coords"}]
-scoreboard objectives add coords.pos_z dummy ["", {"text": "Z coords"}]
+scoreboard objectives add coords.config dummy ["", {"text": "Config"}]
+scoreboard objectives add coords.pos.x dummy ["", {"text": "X coords"}]
+scoreboard objectives add coords.pos.y dummy ["", {"text": "Y coords"}]
+scoreboard objectives add coords.pos.z dummy ["", {"text": "Z coords"}]
 scoreboard objectives add coords.rotate.y dummy ["", {"text": "Y Rotation"}]
+scoreboard objectives add coords.toggle trigger ["", {"text": "Toggle Coords display"}]
+scoreboard objectives add coords.minify trigger ["", {"text": "Toggle display mode"}]
 
 
-scoreboard objectives remove coords.on
-scoreboard objectives remove coords.off
-
-# Add trigger for player can turn state of the actionbar
-scoreboard objectives add coords.off trigger ["", {"text": "Turn action bar coordinate to off"}]
-scoreboard objectives add coords.on trigger ["", {"text": "Turn action bar coordinate to on"}]
-
-tag @a remove coords.display.off
-tag @a remove coords.display.on
+tag @a remove coords.on
+tag @a remove coords.off
+tag @a remove coords.minify.on
+tag @a remove coords.minify.off
 
 title @a times 0 1 0
-title @s actionbar ["", {"text": ""}]
+title @a actionbar ["", {"text": ""}]
 
-scoreboard players set isUp coords.const 1
+scoreboard players set isUp coords.config 1

@@ -1,1 +1,1 @@
-execute if score isUp coords.const matches 1 as @a run function coords:src/core/main
+execute if score isUp coords.config matches 1 run function coords:src/core/main
