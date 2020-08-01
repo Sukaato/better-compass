@@ -13,6 +13,6 @@ tag @a remove coords.off
 tag @a remove coords.minify.on
 tag @a remove coords.minify.off
 
-title @s actionbar ["", {"text": ""}]
+title @a actionbar ["", {"text": ""}]
 
 datapack disable "file/coords"
