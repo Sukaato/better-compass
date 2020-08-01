@@ -1,6 +1,6 @@
 tellraw @a ["",{"text":"[ ","color":"dark_gray"},{"text":"Disable","color":"red"},{"text":" ] ","color":"dark_gray"},{"text":"Coords"}]
 
-scoreboard objectives remove coords.const
+scoreboard objectives remove coords.config
 scoreboard objectives remove coords.pos.x
 scoreboard objectives remove coords.pos.y
 scoreboard objectives remove coords.pos.z
@@ -14,3 +14,5 @@ tag @a remove coords.minify.on
 tag @a remove coords.minify.off
 
 title @s actionbar ["", {"text": ""}]
+
+datapack disable "file/coords"
