@@ -1,1 +1,1 @@
-execute if score isUp coords.config matches 1 run function coords:src/core/main
+execute if data storage config {coords: 1b} run function coords:src/core/main
